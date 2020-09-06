@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Cards - Flexbox CSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>AgeX</h1>
+<div id="container-vertical">
+    <div id="container-horizontal">
+        <h1 align="center" style="font-size:150px;">AgeX</h1>
+        <div id="painel-botoes">
+            <div class="botao">
+                <div class="icone-botao b1">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </div>
+                <a href = "{{ url_for('aggregator') }}">
+                <div class="nome-botao">
+                    Find Help / Aggregator
+                </div>
+                </a>
+            </div>
+            <div class="botao">
+                <div class="icone-botao b2">
+                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                </div>
+                <a href = "{{ url_for('chatbot') }}">
+                <div class="nome-botao">
+                    ChatBot
+                </div>
+                </a>
+            </div>
+            <div class="botao">
+                <div class="icone-botao b3">
+                    <i class="glyphicon glyphicon-usd"></i>
+                </div>
+                <a href = "{{ url_for('aggregator') }}">
+                <div class="nome-botao">
+                    Find Companion
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
