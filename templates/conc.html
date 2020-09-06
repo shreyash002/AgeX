@@ -19,12 +19,14 @@
 <head>
   <title>AgeX - Restaurant Finder</title>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <meta charset="utf-8">
   <style>
     /* Always set the map height explicitly to define the size of the div
      * element that contains the map. */
     #map {
-      height: 100%;
+      height: 60%;
       background-color: grey;
     }
 
@@ -284,6 +286,36 @@
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDahXBijTn9j0F0oQ84hr856kWqMXrNo-o&libraries=places&callback=initMap">
   </script>
+      <div id="painel-botoes">
+            <div class="botao">
+                <div class="icone-botao b1">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </div>
+                <a href = "" data-modal="#modal" class="modal__trigger">
+                <div class="nome-botao">
+                    Find a nurse now
+                </div>
+                </a>
+            </div>
+            <div class="botao">
+                <div class="icone-botao b2">
+                </div>
+                <a href = "{{ url_for('getMain') }}">
+                    <h1>Go Back</h1>
+                </a>
+            </div>
+            <div class="botao">
+                <div class="icone-botao b3">
+                    <i class="glyphicon glyphicon-screenshot"></i>
+                </div>
+                <a href = "" data-modal="#modal2" class="modal__trigger">
+                <div class="nome-botao">
+                    SOS
+                </div>
+                </a>
+            </div>
+        </div>
 </body>
-
+<script  src="{{ url_for('static',filename='styles/script.js') }}"></script>
+<center><h1 style="align:center">AgeX </h1></center>
 </html>
