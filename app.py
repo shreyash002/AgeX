@@ -51,4 +51,4 @@ def getNurse():
     return render_template('nurseConfirm.html', name=name, date=date, time=time,comments=comments)
 
 if __name__ == '__main__':
-    app.run(debug = True) # run app
+    app.run(host='0.0.0.0', port=80, debug = True) # run app
