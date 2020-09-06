@@ -24,9 +24,9 @@ def aggregatorNext():
 def chatbot():
     return render_template('chatbot.html')
 
-@app.route('/companion')
-def companion():
-    return render_template('aggregator.html')
+@app.route('/conce')
+def conce():
+    return render_template('conc.html')
 
 @app.route('/getNurse', methods=['POST'])
 def getNurse():
