@@ -48,8 +48,13 @@ def getNurse():
     time = request.form.get('time')
     comments = request.form.get('comments')
     print(name)
-    print(time)
+    import re
+    timeTemp = re.split('T', time)
+    print(timeTemp)
+    date = timeTemp[0]
+    time = timeTemp[1]
     print(comments)
-    return render
+
+    return render_template('nurseConfirm.html', name=name, date=date, time=time,comments=comments)
 if __name__ == '__main__':
     app.run(debug = True) # run app
