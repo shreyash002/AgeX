@@ -37,7 +37,7 @@
             <div class="icone-botao b2">
                 <i class="glyphicon glyphicon-shopping-cart"></i>
             </div>
-            <a href = "{{ url_for('aggregator') }}">
+            <a href = "{{ url_for('conce') }}">
             <div class="nome-botao">
                 Get Food / Conceirge service
             </div>
@@ -45,13 +45,13 @@
         </div>
         <div class="botao">
             <div class="icone-botao b3">
-                <i class="glyphicon glyphicon-usd"></i>
+                <i class="glyphicon glyphicon-screenshot"></i>
             </div>
-            <a href = "{{ url_for('aggregator') }}">
+            <a href = "" data-modal="#modal2" class="modal__trigger">
             <div class="nome-botao">
                 SOS
             </div>
-        </a>
+            </a>
         </div>
     </div>
 	<div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
@@ -80,10 +80,23 @@
                       </form>
 				
 				<!-- modal close button -->
-				<a href="" data-modal="#modal" class="modal__trigger">
-					<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+				<a href="" class="modal__close demo-close">
+					<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
 				</a>
 				
+			</div>
+		</div>
+  </div>
+  <div id="modal2" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
+		<div class="modal__dialog">
+			<div class="modal__content">
+				<h1>SOS!</h1>
+        <h3>Call 911</h3>
+				<h3><p>Or contact Emergency Contact</h3t>
+				<!-- modal close button -->
+				<a href="" class="modal__close demo-close">
+					<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+				</a>
 			</div>
 		</div>
 	</div>
