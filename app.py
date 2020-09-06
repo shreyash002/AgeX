@@ -12,20 +12,6 @@ GoogleMaps(app, key="my-key")
 def index():
     return render_template('index.html')
 
-@app.route('/postmethod', methods=['POST'])
-def my_map():
-    mymap = Map(
-                identifier="view-side",
-                varname="mymap",
-                style="height:720px;width:1100px;margin:0;", # hardcoded!
-                lat=37.4419, # hardcoded!
-                lng=-122.1419, # hardcoded!
-                zoom=15,
-                markers=[(37.4419, -122.1419)] # hardcoded!
-            )
-
-    return render_template('example.html', mymap=mymap)
-
 @app.route('/aggregator')
 def aggregator():
     return render_template('map.html')
