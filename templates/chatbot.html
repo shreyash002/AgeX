@@ -53,12 +53,16 @@
 	</style>
 </head>
 <body>
-
-    <div id="painel-botoes"> 
-        <h1 style="text-align:center; font-size:150px;" >AgeX</h1>
-    </div>
-
-	<div id="conversation" style="width: 100%; height: 900px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
+  <center>
+  <div class="botao">
+      <a href="{{ url_for('getMain') }}">
+      <div class="nome-botao">
+          <h1 style="font:sans-serif;">AgeX</h1>
+      </div>
+      </a>
+  </div>
+</center>
+	<div id="conversation" style="width: 100%; height: 350px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
 	<form id="chatform" style="margin-top: 10px" onsubmit="return pushChat();">
 		<input type="text" id="wisdom" size="80" value="" placeholder="I need a hotel room">
 	</form>
@@ -158,8 +162,39 @@
 			conversationDiv.scrollTop = conversationDiv.scrollHeight;
 		}
   </script>
-      <div id="painel-botoes">
-        <h1>Go Back</h1>
-      </div>
+      <div id="container-horizontal">
+          <div id="painel-botoes">
+              <div class="botao">
+                  <div class="icone-botao b1">
+                      <i class="glyphicon glyphicon-inbox"></i>
+                  </div>
+                  <a href="{{ url_for('getMain') }}">
+                  <div class="nome-botao">
+                      Get Medicines
+                  </div>
+                  </a>
+              </div>
+              <div class="botao">
+                  <div class="icone-botao b1">
+                      <i class="glyphicon glyphicon-road"></i>
+                  </div>
+                  <a href="{{ url_for('getMain') }}">
+                  <div class="nome-botao">
+                      Go Back
+                  </div>
+                  </a>
+              </div>
+              <div class="botao">
+                  <div class="icone-botao b1">
+                      <i class="glyphicon glyphicon-screenshot"></i>
+                  </div>
+                  <a href="{{ url_for('getMain') }}">
+                  <div class="nome-botao">
+                      SOS
+                  </div>
+                  </a>
+              </div>
+            </div>
+          </div>
 </body>
 </html>
