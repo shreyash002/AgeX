@@ -10,7 +10,15 @@ GoogleMaps(app, key="my-key")
 
 @app.route('/')
 def index():
+    return render_template('login.html')
+
+@app.route('/Main')
+def getMain():
     return render_template('index.html')
+
+@app.route('/companion')
+def companion():
+    return render_template('companion.html')
 
 @app.route('/aggregator')
 def aggregator():
@@ -40,7 +48,7 @@ def getNurse():
     date = timeTemp[0]
     time = timeTemp[1]
     print(comments)
-
     return render_template('nurseConfirm.html', name=name, date=date, time=time,comments=comments)
+
 if __name__ == '__main__':
     app.run(debug = True) # run app

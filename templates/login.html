@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>AgeX - Welcome</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <style>
+        .datepicker {
+          z-index: 9999 !important; /* has to be larger than 1050 */
+        }
+    </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>AgeX</h1>
+<div id="container-vertical">
+    <div id="container-horizontal">
+        <h1 align="center" style="font-size:150px;">AgeZ</h1>
+        <div id="painel-botoes">
+                <form method="" action="{{ url_for('getMain')}}" autocomplete="off">
+                        <fieldset>
+                          <input id="first" type="text" name="name" required>
+                          <label for="first">Your Name</label>
+                          <div class="after"></div>
+                        </fieldset>
+                        <fieldset>
+                            <input id="time" type="password" name="password" required>
+                            <label for="first">Enter password</label>
+                            <div class="after"></div>
+                        </fieldset>
+                        <fieldset>
+                            <a href = "">
+                            <button>submit</button>
+                            </a>
+                        </fieldset>
+                      </form>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+</body>
+<script  src="{{ url_for('static',filename='styles/script.js') }}"></script>
+
+</html>
