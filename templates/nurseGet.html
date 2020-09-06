@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Agex - Chatbot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <body>
+        <center>
+                <h1 style="align:center; font-size: 75px">AgeX</h1>
+      </center>
+
+      <div id="container-horizontal">
+            <div id="painel-botoes">
+                <div class="botao">
+                    <a href="{{ url_for('getMain') }}">
+                    <h1>
+                        Go Back
+                      </h1>
+                    </a>
+                </div>
+
+              </div>
+            </div>
+            <form method="POST" action="{{ url_for('getNurse') }}" autocomplete="off">
+                    <fieldset>
+                      <input id="first" type="text" name="name" required>
+                      <label for="first">Your Name</label>
+                      <div class="after"></div>
+                    </fieldset>
+                    <fieldset>
+                        <input type="datetime-local" id="time" name="time" value="2020-09-06T19:30">
+                    </fieldset>
+                    <fieldset>
+                      <input id="last" type="text" name="comments" required>
+                      <label for="last">Additional Comments</label>
+                      <div class="after"></div>
+                    </fieldset>
+
+                        <input type="submit"/>
+                  </form>
+  </body>
+  </html>

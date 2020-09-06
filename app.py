@@ -12,6 +12,10 @@ GoogleMaps(app, key="my-key")
 def index():
     return render_template('login.html')
 
+@app.route('/nurseGet', methods=['GET','POST'])
+def nurseGet():
+    return render_template('nurseGet.html')
+
 @app.route('/Main')
 def getMain():
     return render_template('index.html')
